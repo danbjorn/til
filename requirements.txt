@@ -1,0 +1,2 @@
+datasette==0.55
+markdown-to-sqlite==0.2
