@@ -23,7 +23,7 @@ After some digging I stumbled across
 on a four year old blog post:
 
 > Yet another one... DNS for the server has AAAA and A records. Client OS thinks it's
-> got IPv6 routing but actually it hasn’t – but you have to wait for the IPv6 attempt to
+> got IPv6 routing but actually it hasn't – but you have to wait for the IPv6 attempt to
 > fail before it falls back to "legacy" IPv4.
 
 This turned out to be it. `dig blargh.com` would return a full answer, but
