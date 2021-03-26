@@ -1,0 +1,6 @@
+*.py[cdo]
+__pycache__/
+*.swp
+
+# Don't commit generated database files
+*.db
