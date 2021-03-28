@@ -1,0 +1,62 @@
+section, body>header {
+    width: 50%;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+    font-size: 5em;
+}
+p, li {
+    font-size: 1em;
+    font-family: sans-serif;
+    line-height: 1.5em;
+}
+code {
+    font-family: monospace;
+    background-color: #f8f8f8;
+    padding: 0.2em;
+    border-radius: 5px;
+}
+.codehilite {
+    display: block;
+    white-space: pre-wrap;
+    padding: 0.5em 1em;
+    margin: auto 3em;
+    border-radius: 5px;
+}
+.codehilite>pre {
+    margin: 0;
+}
+.codehilite>pre>code {
+    padding: 0;
+}
+article {
+    margin: 2em 0;
+}
+hr {
+    width: 50%;
+}
+article>header>h2 {
+    margin-bottom: 0.25em;
+}
+article>footer {
+    font-size: smaller;
+}
+article>footer>p {
+    margin-top: 0;
+}
+@media screen and (max-width: 1500px) {
+    section, body>header {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    section, body>header {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
