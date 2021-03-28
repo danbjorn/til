@@ -1,9 +1,8 @@
 ---
 created: 2021-01-08
 tag: alembic
+title: Alembic complaining that a table has already been defined?
 ---
-# Alembic complaining that a table has already been defined?
-
 I hit a curious one today where [Alembic](https://alembic.sqlalchemy.org/) claimed
 that a table had already been defined, and I was sure it wasn't. I tried it with a
 blank database, I cleared out all other migrations and models, I even changed the model

@@ -1,9 +1,8 @@
 ---
 created: 2021-03-19
 tag: libreoffice
+title: Converting a LibreOffice ODS to a unicode CSV
 ---
-# Converting a LibreOffice ODS to a unicode CSV
-
 On the one hand, it's great that LibreOffice can be run as a command line tool to
 convert between file types. On the other hand, it's ridiculously opaque with minimal
 documentation and little to no error messages.

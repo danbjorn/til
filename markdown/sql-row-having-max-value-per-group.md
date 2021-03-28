@@ -1,9 +1,8 @@
 ---
 created: 2021-03-10
 tag: sql
+title: Rows having the max value per group
 ---
-# Rows having the max value per group
-
 Apparently the "rows with max value per group" SQL question is so common that it turns
 up as an interview question, and it has entire StackOverflow tag dedicated to it:
 <https://stackoverflow.com/questions/tagged/greatest-n-per-group>
@@ -40,7 +39,7 @@ Grade.objects.annotate(
 This will add the row number to the `Grade` objects. However, if you add
 `.filter(rank=1)` on the end you'll get something like:
 
-``` 
+```
 NotSupportedError: Window is disallowed in the filter clause.
 ```
 

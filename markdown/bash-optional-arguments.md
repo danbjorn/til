@@ -1,9 +1,8 @@
 ---
 created: 2021-02-09
 tag: bash
+title: Bash default values for arguments
 ---
-# Bash default values for arguments
-
 If you want an "optional" argument to a function in bash, through parameter
 substitution you can define a default value for an argument. E.g. in:
 

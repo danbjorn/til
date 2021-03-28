@@ -1,9 +1,8 @@
 ---
 created: 2021-03-02
 tag: python
+title: Finding midnight for a given day
 ---
-# Finding midnight for a given day
-
 Historically I’ve always found “midnight for a day” using replace, e.g.:
 
 ```python

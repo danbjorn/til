@@ -1,9 +1,8 @@
 ---
 created: 2021-03-11
 tag: pytest
+title: Pytest's equivalent of unittest's assertAlmostEqual
 ---
-# Pytest's equivalent of unittest's assertAlmostEqual
-
 Looking to compare floats in pytest tests? Try `pytest.approx()`. It's similar to but
 more flexible than unittest's `assertAlmostEqual()`.
 

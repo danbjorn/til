@@ -1,9 +1,8 @@
 ---
 created: 2021-03-09
 tag: python
+title: How `findall` handles groups
 ---
-# How `findall` handles groups
-
 `re.findall` in its basic form is quite handy. But if you specify a group in the
 pattern, `findall` will search for all occurrences of the pattern, but only return the
 group. And not a group object or weird structure, literally as strings.

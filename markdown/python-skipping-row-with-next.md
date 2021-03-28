@@ -1,9 +1,8 @@
 ---
 created: 2021-02-23
 tag: python
+title: Using `next()` to skip the first row of an iterator
 ---
-# Using `next()` to skip the first row of an iterator
-
 Today in "new application of things I already knew". You can repeatedly use `next()` to
 move through an iterator. Or you can use a for loop to do the same thing. Each has
 their use.

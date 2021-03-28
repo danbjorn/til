@@ -1,9 +1,8 @@
 ---
 created: 2021-02-17
 tag: bash
+title: Bash's `type` builtin is very handy
 ---
-# Bash's `type` builtin is very handy
-
 `which` is great for finding where applications are installed, but it can’t handle
 anything that isn’t a regular binary. Enter `type`, a bash builtin, that will find
 anything that bash can find, and provide useful context.

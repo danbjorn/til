@@ -1,9 +1,8 @@
 ---
 created: 2021-03-16
 tag: python
+title: Python's `__init_subclass__` is handy for class registries
 ---
-# Python's `__init_subclass__` is handy for class registries
-
 I'd heard of `__init_subclass__` before but never found a use. But it's really handy for
 class registries, e.g. for a simple plugin architecture. The method is called when the
 class is created, not when an object is instantiated. This avoids metaclass shenanigans

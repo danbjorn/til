@@ -1,9 +1,8 @@
 ---
 created: 2021-01-05
 tag: wireguard
+title: See who's connected to your Wireguard VPN
 ---
-# See who's connected to your Wireguard VPN
-
 To see currently connected Wireguard users you can see whether they have completed a handshake recently:
 
 ```bash

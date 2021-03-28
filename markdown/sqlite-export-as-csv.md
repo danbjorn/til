@@ -1,9 +1,8 @@
 ---
 created: 2021-03-11
 tag: sqlite
+title: Export data to file from SQLite's CLI
 ---
-# Export data to file from SQLite's CLI
-
 The SQLite shell can export to a file in various formats quite easily.
 
 To export a query as a CSV:

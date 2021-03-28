@@ -1,9 +1,8 @@
 ---
 created: 2021-01-05
 tag: wireguard
+title: Enabling Wireguard logging
 ---
-# Enabling Wireguard logging
-
 The default wireguard logging is basically nonexistent which can make debugging hard.
 You can however switch extra debugging on with:
 

@@ -1,9 +1,8 @@
 ---
 created: 2021-03-26
 tag: ssh
+title: Slow SSH connections caused by broken IPv6 records
 ---
-# Slow SSH connections caused by broken IPv6 records
-
 We've been puzzling over slow SSH connections to a couple of our servers. Once you're
 logged in it was fine, but the initial connection would take a good fifteen seconds,
 which feels like aeons.

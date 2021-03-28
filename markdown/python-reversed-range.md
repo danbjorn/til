@@ -1,9 +1,8 @@
 ---
 created: 2021-03-16
 tag: python
+title: Reversing a `range`
 ---
-# Reversing a `range`
-
 `range` objects have an `__reversed__` attribute, which means that you can use them with
 `reversed()` without having to instantiate the list, e.g.
 
