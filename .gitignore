@@ -2,5 +2,6 @@
 __pycache__/
 *.swp
 
-# Don't commit generated database files
+# Don't commit generated files
 *.db
+static/codehilite.css

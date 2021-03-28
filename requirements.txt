@@ -1,2 +1,6 @@
 datasette==0.55
-markdown-to-sqlite==0.2
+datasette-template-sql==1.0.2
+markdown==3.3.4
+yamldown==0.1.8
+sqlite-utils==3.6
+pygments==2.8.1
