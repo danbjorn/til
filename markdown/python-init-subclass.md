@@ -8,4 +8,4 @@ class registries, e.g. for a simple plugin architecture. The method is called wh
 class is created, not when an object is instantiated. This avoids metaclass shenanigans
 which are fun but generally difficult to reason about.
 
-Check out this article from 2018 that goes on to me detail: <https://blog.yuo.be/2018/08/16/__init_subclass__-a-simpler-way-to-implement-class-registries-in-python/>
+Check out this article from 2018 that goes in to more detail: <https://blog.yuo.be/2018/08/16/__init_subclass__-a-simpler-way-to-implement-class-registries-in-python/>
