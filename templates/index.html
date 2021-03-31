@@ -1,42 +1,33 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Things Dan has Learned</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="/static/style.css" type="text/css">
-        <link rel="stylesheet" href="/static/codehilite.css" type="text/css">
-    </head>
-    <body>
-        <header>
-            <h1>Today I Learned</h1>
-            <p>This is a collection of little facts and tips that I come across. Mostly
-            this is so I don't forget things, but they're public in the hope that they
-            may be of use. The site was inspired by
-            <a href="https://til.simonwillison.net/">Simon Willison's TIL site</a>, and
-            is powered by <a href="https://datasette.io/">Datasette</a>. You can see the
-            code behind this article at
-            <a href="https://github.com/danbjorn/til">danbjorn/til</a>.
-        </header>
+{% extends "til-base.html" %}
 
-        <section>
-            <header><h2>Topics</h2></header>
-            <ul class="topiclist">
-                {% for row in sql("select distinct tag from til order by tag") %}
-                    <li><a href="/topic/{{ row.tag }}/">{{ row.tag }}</a></li>
-                {% endfor %}
-            </ul>
-        </section>
+{% block header %}
+    <header>
+        <h1>Today I Learned</h1>
+        <p>This is a collection of little facts and tips that I come across. Mostly
+        this is so I don't forget things, but they're public in the hope that they
+        may be of use. The site was inspired by
+        <a href="https://til.simonwillison.net/">Simon Willison's TIL site</a>, and
+        is powered by <a href="https://datasette.io/">Datasette</a>. You can see the
+        code behind this article at
+        <a href="https://github.com/danbjorn/til">danbjorn/til</a>.
+    </header>
+{% endblock %}
 
-        <section>
-            <header><h2>Recent entries</h2></header>
-            {% for til in sql("select * from til order by created desc limit 10") %}
-                <article>
-                    <header><h3>{{ til.title }}</h2></header>
-                    <footer><p>Created: {{ til.created }} &middot; Topic: <a href="/topic/{{ til.tag }}/">{{ til.tag }}</a></p></footer>
-                    {{ til.html|safe }}
-                </article>
-                <hr>
+{% block body %}
+    <section>
+        <header><h2>Topics</h2></header>
+        <ul class="topiclist">
+            {% for row in sql("select distinct tag from til order by tag") %}
+                <li><a href="/topic/{{ row.tag }}">{{ row.tag }}</a></li>
             {% endfor %}
-        </section>
-    </body>
-</html>
+        </ul>
+    </section>
+
+    <section>
+        <header><h2>Recent entries</h2></header>
+        {% for til in sql("select * from til order by created desc limit 10") %}
+            {% include "_item.html" %}
+            <hr>
+        {% endfor %}
+    </section>
+{% endblock %}

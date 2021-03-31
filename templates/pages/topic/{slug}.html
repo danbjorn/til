@@ -1,29 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Things Dan has Learned about {{ slug|title }}</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="/static/style.css" type="text/css">
-        <link rel="stylesheet" href="/static/codehilite.css" type="text/css">
-    </head>
-    <body>
-        <header>
-            <h1>Today I Learned</h1>
-            <p>This page holds alll my TILs about <strong>{{ slug }}</strong>. To see
-            more topics, <a href="/">go back</a> to the main page.</p>
-        </header>
+{% extends "til-base.html" %}
 
-        <section>
-            {% for til in sql("select * from til where tag=? order by created desc", [slug]) %}
-                <article>
-                    <header><h3>{{ til.title }}</h2></header>
-                    <footer><p>Created: {{ til.created }} &middot; Topic: {{ til.tag }}</p></footer>
-                    {{ til.html|safe }}
-                </article>
-                <hr>
-            {% else %}
-                <p>No TILs for {{ slug }}</p>
-            {% endfor %}
-        </section>
-    </body>
-</html>
+{% block title%}Things Dan has Learned about {{ slug|title }}{% endblock %}
+
+{% block header %}
+    <header>
+        <h1>Today I Learned</h1>
+        <p>This page holds all my TILs about <strong>{{ slug }}</strong>. To see
+        more topics, <a href="/">go back</a> to the main page.</p>
+    </header>
+{% endblock %}
+
+{% block body %}
+    <section>
+        {% for til in sql("select * from til where tag=? order by created desc", [slug]) %}
+            {% include "_item.html" %}
+            <hr>
+        {% else %}
+            <p>No TILs for {{ slug }}</p>
+        {% endfor %}
+    </section>
+{% endblock %}
