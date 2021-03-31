@@ -6,6 +6,8 @@ Created so I don't forget all the little things I learn and maybe help someone e
 
 ## Todo
 
+* Deploy to heroku
+* Auto-build via github actions
 * Add per-TIL pages
 * Only show the X most recent TILs
 * Paging
