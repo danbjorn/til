@@ -19,10 +19,20 @@
         </header>
 
         <section>
+            <header><h2>Topics</h2></header>
+            <ul class="topiclist">
+                {% for row in sql("select distinct tag from til order by tag") %}
+                    <li><a href="/topic/{{ row.tag }}/">{{ row.tag }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section>
+            <header><h2>Recent entries</h2></header>
             {% for til in sql("select * from til order by created desc limit 10") %}
                 <article>
-                    <header><h2>{{ til.title }}</h2></header>
-                    <footer><p>Created: {{ til.created }} &middot; Topic: {{ til.tag }}</p></footer>
+                    <header><h3>{{ til.title }}</h2></header>
+                    <footer><p>Created: {{ til.created }} &middot; Topic: <a href="/topic/{{ til.tag }}/">{{ til.tag }}</a></p></footer>
                     {{ til.html|safe }}
                 </article>
                 <hr>

@@ -45,6 +45,20 @@ article>footer {
 article>footer>p {
     margin-top: 0;
 }
+
+.topiclist li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.topiclist li:last-child:after {
+    content: ""
+}
+
+.topiclist li:after {
+    content: " · "
+}
+
 @media screen and (max-width: 1500px) {
     section, body>header {
         width: 70%;

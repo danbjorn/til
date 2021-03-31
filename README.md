@@ -10,5 +10,4 @@ Created so I don't forget all the little things I learn and maybe help someone e
 * Auto-build via github actions
 * Add per-TIL pages
 * Paging
-* Filter by topic
 * Propose patch for markdown-to-sqlite for extenstions so I don't have to effectively vendor it
