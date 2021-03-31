@@ -19,7 +19,7 @@
         </header>
 
         <section>
-            {% for til in sql("select * from til order by created desc") %}
+            {% for til in sql("select * from til order by created desc limit 10") %}
                 <article>
                     <header><h2>{{ til.title }}</h2></header>
                     <footer><p>Created: {{ til.created }} &middot; Topic: {{ til.tag }}</p></footer>

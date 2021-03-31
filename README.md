@@ -9,7 +9,6 @@ Created so I don't forget all the little things I learn and maybe help someone e
 * Deploy to heroku
 * Auto-build via github actions
 * Add per-TIL pages
-* Only show the X most recent TILs
 * Paging
 * Filter by topic
 * Propose patch for markdown-to-sqlite for extenstions so I don't have to effectively vendor it
