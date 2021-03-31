@@ -16,7 +16,7 @@
 {% block body %}
     <section>
         <header><h2>Topics</h2></header>
-        <ul class="topiclist">
+        <ul class="horizontal-list">
             {% for row in sql("select distinct tag from til order by tag") %}
                 <li><a href="/topic/{{ row.tag }}">{{ row.tag }}</a></li>
             {% endfor %}

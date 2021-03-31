@@ -1,4 +1,4 @@
-section, body>header {
+section, body>header, body>footer {
     width: 50%;
     margin: 0 auto;
 }
@@ -46,17 +46,21 @@ article>footer>p {
     margin-top: 0;
 }
 
-.topiclist li {
+.horizontal-list li {
     list-style-type: none;
     display: inline-block;
 }
 
-.topiclist li:last-child:after {
+.horizontal-list li:last-child:after {
     content: ""
 }
 
-.topiclist li:after {
+.horizontal-list li:after {
     content: " · "
+}
+
+body>footer ul {
+    text-align: center;
 }
 
 @media screen and (max-width: 1500px) {
