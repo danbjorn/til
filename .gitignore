@@ -4,4 +4,3 @@ __pycache__/
 
 # Don't commit generated files
 *.db
-static/codehilite.css
