@@ -30,7 +30,7 @@ will be written out - after that it will go back to outputting to the shell. Whe
 done you can set `.mode list` to go back to SQLite's default output.
 
 Note the use of `.headers on`. By default SQLite doesn't output headers. I find this is
-generally useful one to have on permanently.
+generally a useful one to have on permanently.
 
 You can read more about all this in the
 [output formats documentation](https://sqlite.org/cli.html#changing_output_formats).

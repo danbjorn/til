@@ -4,7 +4,7 @@ tag: sql
 title: Rows having the max value per group
 ---
 Apparently the "rows with max value per group" SQL question is so common that it turns
-up as an interview question, and it has entire StackOverflow tag dedicated to it:
+up as an interview question, and it has an entire StackOverflow tag dedicated to it:
 <https://stackoverflow.com/questions/tagged/greatest-n-per-group>
 
 This Stack Overflow answer is quite nice in its breadth of options:

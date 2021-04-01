@@ -7,7 +7,7 @@ title: Reversing a `range`
 `reversed()` without having to instantiate the list, e.g.
 
 ```python
-for index in reversed(range(len(data))):
+for index in reversed(range(5)):
 ```
 
 Note that this is not true of `enumerate()` objects - to reverse an enumerated iterator
