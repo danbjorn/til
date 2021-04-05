@@ -1,0 +1,25 @@
+name: Build DB and deploy to Heroku
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2.2.1
+      - name: Python Dependency Installation
+        uses: py-actions/py-dependency-install@v2.1.0
+      - name: Build DB
+        run: python build-db.py
+      - name: Deploy to heroku
+        run: |
+          datasette publish heroku til.db \
+            -n dan-til \
+            --template-dir templates \
+            --static static:static/ \
+            --install datasette-template-sql
