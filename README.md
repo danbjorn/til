@@ -8,7 +8,6 @@ Also an excuse to play with [datasette](https://datasette.io/).
 
 ## Todo
 
-* Deploy to heroku
 * Auto-build via github actions
 * Add per-TIL pages
 * Paging
