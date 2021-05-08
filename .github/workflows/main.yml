@@ -16,10 +16,32 @@ jobs:
         uses: py-actions/py-dependency-install@v2.1.0
       - name: Build DB
         run: python build-db.py
+      - name: Credentials file for heroku
+        uses: little-core-labs/netrc-creds@v2.0.0
+        with:
+          creds: |
+            [
+              {
+                "machine": "api.heroku.com",
+                "login": "${{ secrets.HEROKU_EMAIL }}",
+                "password": "${{ secrets.HEROKU_KEY }}"
+              },
+              {
+                "machine": "git.heroku.com",
+                "login": "${{ secrets.HEROKU_EMAIL }}",
+                "password": "${{ secrets.HEROKU_KEY }}"
+              }
+            ]
+      - name: Install heroku client
+        run: curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+      - name: Login to heroku
+        run: heroku login
+      - name: Install heroku-builds plugin
+        run: heroku plugins:install heroku-builds
       - name: Deploy to heroku
         run: |
           datasette publish heroku til.db \
-            -n dan-til \
+            -n ${{ secrets.HEROKU_APP_NAME }} \
             --template-dir templates \
             --static static:static/ \
             --install datasette-template-sql
