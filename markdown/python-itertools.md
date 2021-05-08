@@ -1,7 +1,7 @@
 ---
 created: 2021-04-23
 tag: python
-title: `more-itertools` is a treasure trove of goodies
+title: Python's `more-itertools` is a treasure trove of goodies
 ---
 Python's `itertools` library is a lovely set of widgets for manipulating and using
 iterators, and can be used to make some wonderfully graceful code. However, it does
