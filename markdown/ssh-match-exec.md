@@ -37,9 +37,14 @@ write a script for managing the VPN that's a bit smarter, and call that instead.
 as it returns a 0 when the VPN is ready and non-zero otherwise, it'll work. I'll leave
 the specifics as an exercise for the reader.
 
-The second is that you lose tab completion of hostnames. This is actually a pretty
-sizeable issue and I'm not sure of the best way to get around this. I haven't dug in to
-it yet but I am assuming there is a completion script somewhere that looks only for
-`Host` directives, and it needs extending to include `Match host` directives. I couldn't
-find any quick fixes on the internet, but if you happen to know of an answer do let me
-know.
+The second is that you lose tab completion of hostnames. Helpfully it turns out you can
+combine `Match exec` with `Host`:
+
+```
+Match host example.com exec "sudo wg-quick up wg0 || exit 0"
+Host example.com
+    User blargh
+```
+
+From the perspective of the connection `Host` is effectively ignored, but the tab
+completion script still spots it.
