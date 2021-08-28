@@ -34,8 +34,8 @@ jobs:
             ]
       - name: Install heroku client
         run: curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
-      - name: Login to heroku
-        run: heroku login
+#       - name: Login to heroku
+#         run: heroku login
       - name: Install heroku-builds plugin
         run: heroku plugins:install heroku-builds
       - name: Deploy to heroku
