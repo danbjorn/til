@@ -1,0 +1,19 @@
+{% extends "til-base.html" %}
+
+{% set til = display_rows[0] %}
+
+{% block title%}Things Dan has Learned about: {{ til }}{% endblock %}
+
+{% block header %}
+    <header>
+        <h1>{{ til.title }}</h1>
+    </header>
+{% endblock %}
+
+{% block body %}
+    <section>
+        <footer><p>Created: {{ til.created }} &middot; Topic: <a href="/topic/{{ til.tag }}">{{ til.tag }}</a></p></footer>
+        {{ til.html|safe }}
+        <p>See more things I learned about <a href="/topic/{{ til.tag }}">{{ til.tag }}</a>, or go back to the <a href="/">main page</a>.</p>
+    </section>
+{% endblock %}
