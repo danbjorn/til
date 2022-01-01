@@ -1,5 +1,5 @@
 <article>
-    <header><h3>{{ til.title }}</h2></header>
+    <header><h3><a href="/til/til/{{ til._id }}">{{ til.title }}</a></h3></header>
     <footer><p>Created: {{ til.created }} &middot; Topic: {% if slug %}{{ til.tag }}{% else %}<a href="/topic/{{ til.tag }}">{{ til.tag }}</a>{% endif %}</p></footer>
     {{ til.html|safe }}
 </article>
